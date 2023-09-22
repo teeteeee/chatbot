@@ -24,22 +24,22 @@ function Chatwidget() {
 
   const sendUserMessage = async (event) => {
     event.preventDefault();
-  
+
     if (!userInput) {
       return; // Prevent sending empty queries
     }
-  
+
     const question = userInput;
     setUserInput("");
     setWaitingForResponse(true);
-  
+
     const userMessage = {
       id: new Date().toISOString(),
       text: question,
       sender: "User",
     };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
-  
+
     try {
       const response = await axios.post(
         // "http://localhost:80/new",
@@ -53,16 +53,15 @@ function Chatwidget() {
         }
       );
 
-      const aiResponse = response.data.data.question;  
+      const aiResponse = response.data.data.question;
       console.log("aiResponse", aiResponse);
       const aiMessage = {
         id: new Date().toISOString(),
         text: aiResponse,
         sender: "AI",
       };
-  
+
       setMessages((prevMessages) => [...prevMessages, aiMessage]);
-      
     } catch (error) {
       console.error("Error sending/receiving message:", error);
     } finally {
@@ -77,14 +76,13 @@ function Chatwidget() {
           <nav className="tyn-appbar">
             <div className="tyn-appbar-wrap">
               <div className="tyn-appbar-logo">
-                <div className="tyn-logo" >
+                <div className="tyn-logo">
                   <img src="images/konvas.jpg" alt="" />
                 </div>
               </div>
               {/* <!-- tyn-logo --> */}
               <div className="tyn-appbar-content">
                 Konvas AI... your personal shopping assistant
-                
               </div>
               {/* <!-- .tyn-appbar-content --> */}
             </div>
@@ -93,9 +91,6 @@ function Chatwidget() {
           {/* .tyn-appbar */}
           <div className="tyn-content tyn-content-full-height tyn-chatbot tyn-chatbot-page has-aside-base">
             <div className="tyn-aside tyn-aside-base">
-              
-             
-              
               {/* .tyn-aside-head */}
             </div>
             {/* .tyn-aside */}
@@ -121,13 +116,12 @@ function Chatwidget() {
                 <div className="container px-0">
                   <div className="tyn-qa tyn-qa-bubbly">
                     <div className="tyn-qa-item">
-                    <div className="tyn-qa-message tyn-text-block">
-                          <p>
-                            Hey, I’m your personal shopping
-                            assistant. Welcome to our store. How can I
-                            assist you today?
-                          </p>
-                        </div>
+                      <div className="tyn-qa-message tyn-text-block">
+                        <p>
+                          Hey, I’m your personal shopping assistant. Welcome to
+                          our store. How can I assist you today?
+                        </p>
+                      </div>
                     </div>
                     {messages.map((message) => (
                       <div className="tyn-qa-item">
@@ -139,8 +133,6 @@ function Chatwidget() {
                           }`}
                           key={message.id}
                         >
-                          
-
                           <div
                             className={`tyn-qa-message ${
                               message.sender === "AI"
