@@ -137,7 +137,7 @@ dl {
     --appbar-height: 73px;
   }
   .tyn-content.has-aside-base, .tyn-content.has-aside-sticky {
-    --aside-width:320px;
+    --aside-width:0px;
   }
   .tyn-content-inner {
     padding: 2rem 1.25rem;
@@ -265,14 +265,14 @@ dl {
 }
 .tyn-aside {
   width: var(--aside-width);
-  background: var(--aside-bg);
+  background: var(--bs-primary-50);
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
   flex-shrink: 0;
   overflow: hidden;
-  border-right: 1px solid var(--border-color);
+  /* border-right: 1px solid var(--bs-primary-50); */
 }
 .tyn-aside-base {
   height: var(--content-full-height);

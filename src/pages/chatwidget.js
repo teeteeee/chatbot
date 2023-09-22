@@ -56,21 +56,7 @@ function Chatwidget() {
     <div>
       <body className="tyn-body">
         <div className="tyn-root">
-          <nav className="tyn-appbar">
-            <div className="tyn-appbar-wrap">
-              <div className="tyn-appbar-logo">
-                <div className="tyn-logo">
-                  <img src="images/konvas.jpg" alt="" />
-                </div>
-              </div>
-              {/* <!-- tyn-logo --> */}
-              <div className="tyn-appbar-content">
-                Konvas AI... your personal shopping assistant
-              </div>
-              {/* <!-- .tyn-appbar-content --> */}
-            </div>
-            {/* <!-- .tyn-appbar-wrap --> */}
-          </nav>
+          
           {/* .tyn-appbar */}
           <div className="tyn-content tyn-content-full-height tyn-chatbot tyn-chatbot-page has-aside-base">
             <div className="tyn-aside tyn-aside-base">
@@ -78,23 +64,7 @@ function Chatwidget() {
             </div>
             {/* .tyn-aside */}
             <div className="tyn-main" id="tynMain">
-              <ul className="tyn-list-inline d-md-none translate-middle-x position-absolute start-50 z-1">
-                <li>
-                  <button className="btn btn-icon btn-pill btn-white js-toggle-main">
-                    {/* x-lg */}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={16}
-                      height={16}
-                      fill="currentColor"
-                      className="bi bi-x-lg"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-                    </svg>
-                  </button>
-                </li>
-              </ul>
+              
               <div className="tyn-chat-body my-4 px-4" data-simplebar="">
                 <div className="container px-0">
                   <div className="tyn-qa tyn-qa-bubbly">
