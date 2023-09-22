@@ -1,11 +1,7 @@
 import React from "react";
 import "./App.css";
-import LoginPage from "./auth/login";
-import HomePage from "./pages/homePage";
-// import DynamicHomePage from "./pages/dynamicHome";
-// import { UserProvider } from "./UserContext";
 import { UserProvider } from "./UserContext";
-import NewHome from "./pages/newhome";
+import Chatwidget from "./pages/chatwidget";
 import PageNotFound from "./pageNotFound";
 import {
   BrowserRouter as Router,
@@ -35,12 +31,9 @@ function App() {
       <Router >
         <div className="App">
           <Routes >
-            <Route path="/" element={<LoginPage />} />
-            <Route path="/home" element={<HomePage />} />
-            {/* <Route path="/newhome" element={<NewHome />} />        */}
-            {/* <Route path="/:folderName" element={<DynamicHomePage />} /> */}
+            <Route path="/" element={<Chatwidget />} />
             
-            <Route path="/:folderName" element={<NewHome />} />
+            {/* <Route path="/:folderName" element={<NewHome />} /> */}
           
             {/* Catch-all route for undefined paths */}
             <Route path="*" element={<PageNotFound />} />
