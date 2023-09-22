@@ -1,27 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useParams, Link } from "react-router-dom";
-import { useUserContext } from "../UserContext";
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/system";
-
-// Define a styled component for the button
-const StyledButton = styled(Button)({
-  borderRadius: "8px",
-  border: "2px solid black",
-  spacing: "20px",
-  display: "flex",
-  justifyContent: "center",
-});
 
 function Chatwidget() {
   const [messages, setMessages] = useState([]);
   const [userInput, setUserInput] = useState("");
   const [waitingForResponse, setWaitingForResponse] = useState(false);
-  const { user } = useUserContext();
-  const { folderName } = useParams();
-
   const sendUserMessage = async (event) => {
     event.preventDefault();
 
