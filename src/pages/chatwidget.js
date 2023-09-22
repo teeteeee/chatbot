@@ -121,45 +121,13 @@ function Chatwidget() {
                 <div className="container px-0">
                   <div className="tyn-qa tyn-qa-bubbly">
                     <div className="tyn-qa-item">
-                      
-                      {user && Object.keys(user).length !== 0 ? (
-                        <div className="tyn-qa-message tyn-text-block">
+                    <div className="tyn-qa-message tyn-text-block">
                           <p>
-                            {/* {user.given_name} */}
-                            Hey {user.given_name}, I’m your personal shopping
-                            assistant. Welcome to {folderName} store. How can I
+                            Hey, I’m your personal shopping
+                            assistant. Welcome to our store. How can I
                             assist you today?
                           </p>
                         </div>
-                      ) : (
-                        <div className="tyn-qa-message tyn-text-block">
-                          <p>
-                            Hey, I’m your personal shopping assistant. Welcome
-                            to {folderName} store. You are not logged in. Please
-                            login so I can assist you today.
-                          </p>
-
-                          <div
-                            style={{
-                              display: "flex",
-                              justifyContent: "center",
-                              alignItems: "center",
-                            }}
-                          >
-                            <Stack spacing={2} direction="row">
-                              <Link to="/">
-                                <StyledButton variant="contained">
-                                  Login
-                                </StyledButton>
-                              </Link>
-                              <StyledButton variant="contained">
-                                Register
-                              </StyledButton>
-                            </Stack>
-                          </div>
-                        </div>
-                      )}
-                      {/* .tyn-qa-message */}
                     </div>
                     {messages.map((message) => (
                       <div className="tyn-qa-item">
